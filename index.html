@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+    
+        <title></title>
+        
+    </head>
+    
+    <body>
+        
+        
+        <div id="root">
+            
+            <!-- all we want to do here is to dynamically bind the value here -->
+            
+            <!-- use v-model to bind from view to the model's message property -->
+            <input type="text" id="myInput" v-model="message">
+            
+            <!-- use {{}} to bind from the model's message property to view -->
+            <p> {{message}} </p>
+            
+        </div>
+        
+        <script src="vue.js"></script>
+        
+        <script src="view-model.js"></script>
+        <script src="model.js"></script>
+        
+    </body>
+    
+</html>
