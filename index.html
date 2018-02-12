@@ -18,10 +18,14 @@
                 
             </ul>
             
-            
-            <input id="myInput" type="text">
-            
-            <button id="myBtn">Add Name</button>
+            <!-- fetch the input through v-model -->
+            <!-- we can use the v-model directive to create two-way data bindings on form input and textarea elements. -->
+            <input id="myInput" type="text" v-model="newName">
+            <!-- v-on:click replace the needs of  document.querySelector('#myBtn').addEventListener('click', () => { });-->
+            <!--click is an event-->
+            <!-- button, when we click on it, trigger onClick method -->
+            <button @click="onClick">Add Name</button>
+            <!--button v-on:click="onClick">Add Name</button-->
             
         </div>
         

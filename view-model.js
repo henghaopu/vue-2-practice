@@ -4,20 +4,11 @@ var app = new Vue({
     
     data: data,
     
-    mounted(){
-        document.querySelector('#myBtn').addEventListener('click', () => {
-    
-            let name = document.querySelector('#myInput');
-
-            app.names.push(name.value);
-
-            name.value = '';
-        });
+    // any custom methods that we add should be nested within the methods object
+    methods: {
+        
+        onClick: addName
+        
     }
     
 });
-
-
-
-
-
