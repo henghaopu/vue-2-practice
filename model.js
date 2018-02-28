@@ -1,15 +1,18 @@
 let data = {
-    
-    newName: '',
-    
-    names: ['Joe', 'Mary', 'Jane', 'Jack']
-     
+    className: 'color-red',
+    title: 'Now the title is being set through JavaScript.',
+    isLoading: 'false',
+    isDisabled: 'false' 
 };
 
-let addName = function() {
+let mToggleClass = function () {
+    this.isLoading = true;
+};
 
-    this.names.push(this.newName);
+let mResetToggleMe = function () {
+    this.isLoading = false;
+}
 
-    this.newName = '';
-    
+let mDisaableBtn = function () {
+    this.isDisabled = true;
 }

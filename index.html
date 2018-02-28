@@ -5,27 +5,28 @@
     <head>
     
         <title></title>
-        
+        <link rel="stylesheet" href="styles.css">
     </head>
     
     <body>
         
         <div id="root">
+            <!-- determine the class value dynamically -->
+            <h1 :class="className">H1</h1>
             
-            <ul>
+            <div>
+                <!-- attribute binding -->
+                <button v-bind:title="title" @click="resetToggleMe">Hover Over Me or click me</button>
+            </div>
             
-                <li v-for="name in names" v-text="name"></li>
-                
-            </ul>
+            <!-- bug: initial backbround should be white -->
+            <div>
+                <button v-bind:class="{'is-loading':isLoading}" @click="toggleClass">Toggle Me</button>
+            </div>
             
-            <!-- fetch the input through v-model -->
-            <!-- we can use the v-model directive to create two-way data bindings on form input and textarea elements. -->
-            <input id="myInput" type="text" v-model="newName">
-            <!-- v-on:click replace the needs of  document.querySelector('#myBtn').addEventListener('click', () => { });-->
-            <!--click is an event-->
-            <!-- button, when we click on it, trigger onClick method -->
-            <button @click="onClick">Add Name</button>
-            <!--button v-on:click="onClick">Add Name</button-->
+            <div>
+                <button :disabled="isDisabled" @click="disableBtn">Click Me To Disable</button>
+            </div>
             
         </div>
         
