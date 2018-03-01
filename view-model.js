@@ -1,9 +1,17 @@
 var app = new Vue({
+    
     el: '#root',
+    
+    
     data: data,
+    
+    computed: {
+        
+        reversedMessage,
+        incompleteTasks
+    },
+    
     methods: {    
-        toggleClass: mToggleClass,
-        resetToggleMe: mResetToggleMe,
-        disableBtn: mDisaableBtn
+        
     }
-});
+}); 

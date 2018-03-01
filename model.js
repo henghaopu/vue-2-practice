@@ -1,18 +1,38 @@
 let data = {
-    className: 'color-red',
-    title: 'Now the title is being set through JavaScript.',
-    isLoading: 'false',
-    isDisabled: 'false' 
+    
+    message: 'Hello World!',
+    
+    tasks: [
+        
+        { description: 'Go to the store', completed: true }, 
+        { description: 'Finish screencast', completed: false }, 
+        { description: 'Make donation', completed: false }, 
+        { description: 'Clear inbox', completed: false }, 
+        { description: 'Make dinner', completed: false }, 
+        { description: 'Clean room', completed: true }
+        
+    ]
+    
+    
+}; // delete the semi-colon helps to refresh
+
+let reversedMessage = function () {
+    return this.message.split('').reverse().join('');
 };
 
-let mToggleClass = function () {
-    this.isLoading = true;
+let incompleteTasks = function () {
+    
+    return this.tasks.filter(function(task) {
+        return !task.completed;
+    })
+    
 };
 
-let mResetToggleMe = function () {
-    this.isLoading = false;
-}
+/*
 
-let mDisaableBtn = function () {
-    this.isDisabled = true;
-}
+    https://alligator.io/js/filter-array-method/
+
+    var newArray = array.filter(function(item) {
+        return condition;
+    });
+*/

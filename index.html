@@ -6,31 +6,40 @@
     
         <title></title>
         <link rel="stylesheet" href="styles.css">
+        
     </head>
     
     <body>
         
         <div id="root">
-            <!-- determine the class value dynamically -->
-            <h1 :class="className">H1</h1>
+            <h1>
             
-            <div>
-                <!-- attribute binding -->
-                <button v-bind:title="title" @click="resetToggleMe">Hover Over Me or click me</button>
-            </div>
+                {{ message.split('').reverse().join('') }}
+                
+            </h1> 
             
-            <!-- bug: initial backbround should be white -->
-            <div>
-                <button v-bind:class="{'is-loading':isLoading}" @click="toggleClass">Toggle Me</button>
-            </div>
+            <h2>
             
-            <div>
-                <button :disabled="isDisabled" @click="disableBtn">Click Me To Disable</button>
-            </div>
+                {{ reversedMessage }}
+                
+            </h2>
             
+            
+            <h3>All Tasks</h3>
+            <ul>
+                <li v-for="task in tasks" v-text="task.description"></li>
+            </ul>
+            
+            <h3>Incompleted Tasks</h3>
+            <ul>
+                <li v-for="task in incompleteTasks" v-text="task.description"></li>
+            </ul>
         </div>
         
-        <script src="vue.js"></script>
+        
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
         
         <script src="model.js"></script>
         <script src="view-model.js"></script>
