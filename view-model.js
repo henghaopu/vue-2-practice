@@ -1,17 +1,16 @@
-var app = new Vue({
+// why Vue.component need to write before new Vue?
+Vue.component('task', {
     
-    el: '#root',
+    template: '<li><slot></slot></li>'
+    
+});
+
+
+new Vue({
+    
+   el: '#root' 
     
     
-    data: data,
-    
-    computed: {
-        
-        reversedMessage,
-        incompleteTasks
-    },
-    
-    methods: {    
-        
-    }
-}); 
+});
+
+
